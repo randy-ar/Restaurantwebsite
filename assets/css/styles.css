@@ -10,6 +10,7 @@
   --first-color: hsl(19, 64%, 54%);
   --first-color-alt: hsl(19, 64%, 52%);
   --title-color: hsl(19, 16%, 15%);
+  --banner-color: hsl(19, 16%, 15%);
   --text-color: hsl(19, 16%, 35%);
   --text-color-light: hsl(19, 8%, 55%);
   --body-color: hsl(19, 100%, 96%);
@@ -66,7 +67,37 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background 0.4s; /* for dark mode animation */
+  transition: background .4s;
+}
+
+body.dark-theme{
+  --first-color: hsl(19, 64%, 54%);
+  --first-color-alt: hsl(19, 64%, 52%);
+  --title-color: hsl(19, 24%, 85%);
+  --text-color: hsl(19, 16%, 65%);
+  --text-color-light: hsl(19, 24%, 65%);
+  --body-color: hsl(19, 12%, 8%);
+  --header-color: hsla(18, 12%, 8%, 0.85);
+  --container-color: hsl(19, 10%, 10%);
+  --bg-header: hsl(18, 12%, 9%);
+  --banner-color: hsl(19, 16%, 15%);
+}
+
+.dark-theme .newsletter-container{
+  background-color: var(--container-color);
+}
+.dark-theme #newsletter form{
+  background-color: var(--body-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+  width: .5rem;
+  border-radius: .5rem;
+  background-color: hsl(19, 8%, 15%);
+}
+.dark-theme::-webkit-scrollbar-thumb{
+  border-radius: .4rem;
+  background-color: hsl(19, 8%, 25%);
 }
 
 h1, h2, h3 {
@@ -105,6 +136,9 @@ button i{
 button:hover i{
   transform: translateX(.25rem);
 }
+.dark-button:hover{
+  color: var(--first-color-alt);
+}
 
 .subtitle{
   font-family: var(--subtitle-font);
@@ -140,7 +174,7 @@ button:hover i{
   position: absolute;
   left: -30px;
   top: 15px;
-  width: 30%;
+  width: 75px;
   height: auto;
   opacity: .2;
   transform: rotate(180deg) scale(1.2);
@@ -194,7 +228,7 @@ button:hover i{
   overflow: hidden;
 }
 #about img {
-  width: 300px;
+  width: 220px;
 }
 #about h1 img {
   width: 40px;
@@ -310,7 +344,7 @@ button:hover i{
 }
 #newsletter .newsletter-container{
   position: relative;
-  background-color: var(--title-color);
+  background-color: var(--banner-color);
   color: var(--text-color-light);
   overflow: hidden;
 }

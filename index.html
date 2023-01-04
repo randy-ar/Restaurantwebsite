@@ -21,9 +21,9 @@
     <title>Sushi Website</title>
   </head>
   <body>
-      <!--==================== HEADER ====================-->
+    <!--==================== HEADER ====================-->
     <header class="header" id="header">
-      <nav class="fixed w-screen p-3">
+      <nav class="relative w-screen p-3">
         <div class="container mx-auto">
           <div class="flex justify-between content-end">
             <div class="p-1 flex content-end">
@@ -32,32 +32,32 @@
             </div>
             <div class="p-1 md:block hidden">
               <div class="flex justify-end space-x-6">
-                <a href="#" class="me-3 font-normal">Home</a>
-                <a href="#" class="me-3 font-normal">About Us</a>
-                <a href="#" class="me-3 font-normal">Popular</a>
-                <a href="#" class="me-3 font-normal">Recently</a>
-                <a href="#" class="font-normal"><i class="ri-moon-line"></i></a>
+                <a href="#home" class="me-3 font-normal">Home</a>
+                <a href="#about" class="me-3 font-normal">About Us</a>
+                <a href="#popular" class="me-3 font-normal">Popular</a>
+                <a href="#recently" class="me-3 font-normal">Recently</a>
+                <button onclick="darkTheme()" class="font-normal dark-button"><i class="ri-moon-line"></i></button>
               </div>
             </div>
             <div class="p-1 md:hidden block">
               <div class="flex justify-end space-x-5">
-                <a href="#" class="font-normal"><i class="ri-moon-line"></i></a>
-                <a id="nav-toggle" href="#" type="button" class="font-normal"><i class="ri-apps-2-line"></i></a>
+                <button onclick="darkTheme()" class="font-normal dark-button"><i class="ri-moon-line"></i></button>
+                <a id="nav-toggle" href="#" onclick="return false;" type="button" class="font-normal"><i class="ri-apps-2-line"></i></a>
               </div>
             </div>
             <div id="nav-menu" class="left-0 top-0 w-screen absolute h-64 drop-shadow">
               <div class="relative h-full w-full flex flex-col place-content-center place-items-center">
                 <img class="block md:hidden" src="assets\img\leaf-branch-4.png" alt="menu leaf">
                 <div class="absolute right-3 top-2">
-                  <a href="#">
+                  <a href="#" onclick="return false;">
                     <i class="ri-close-line text-xl"></i>
                   </a>
                 </div>
                 <div class=" space-y-4">
-                  <a href="#" class="block text-center font-normal">Home</a>
-                  <a href="#" class="block text-center font-normal">About Us</a>
-                  <a href="#" class="block text-center font-normal">Popular</a>
-                  <a href="#" class="block text-center font-normal">Recently</a>
+                  <a href="#home" class="block text-center font-normal">Home</a>
+                  <a href="#about" class="block text-center font-normal">About Us</a>
+                  <a href="#popular" class="block text-center font-normal">Popular</a>
+                  <a href="#recently" class="block text-center font-normal">Recently</a>
                 </div>
               </div>
             </div>
@@ -65,11 +65,11 @@
         </div>
       </nav>
     </header>
-
+    <div id="block-nav"></div>
       <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section pt-96 md:pt-0 md:h-screen md:mb-0 mb-16 flex content-center items-center" id="home">
+      <section class="home section py-16 md:py-0 md:h-screen md:mb-0 mb-16 flex content-center items-center" id="home">
         <img class="leaf-1" src="assets\img\leaf-branch-2.png" alt="leaf 1 home">
         <img class="leaf-2" src="assets\img\leaf-branch-4.png" alt="leaf 2 home">
 
@@ -136,7 +136,7 @@
               </div>
               <div class="mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-6 lg:gap-16">
                 <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
                     <img src="assets\img\popular-onigiri.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
                       <h1>
@@ -160,7 +160,7 @@
                   </div>
                 </div>
                 <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
                     <img src="assets\img\popular-spring-rols.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
                       <h1>
@@ -184,7 +184,7 @@
                   </div>
                 </div>
                 <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
                     <img src="assets\img\popular-sushi-rolls.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
                       <h1>
@@ -374,7 +374,7 @@
     </a>
 
     <!--========== SCROLL UP ==========-->
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
