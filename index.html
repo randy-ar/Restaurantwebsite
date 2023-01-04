@@ -1,23 +1,385 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-<body>
-  Hello world
-  <script src="script.js"></script>
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
- <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-</body>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+
+    <title>Sushi Website</title>
+  </head>
+  <body>
+      <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="fixed w-screen p-3">
+        <div class="container mx-auto">
+          <div class="flex justify-between content-end">
+            <div class="p-1 flex content-end">
+              <img src="assets/img/logo.png" alt="" class="inline mr-2 h-6 w-6">
+              <h1 class="inline text-lg font-semibold">Sushi</h1>
+            </div>
+            <div class="p-1 md:block hidden">
+              <div class="flex justify-end space-x-6">
+                <a href="#" class="me-3 font-normal">Home</a>
+                <a href="#" class="me-3 font-normal">About Us</a>
+                <a href="#" class="me-3 font-normal">Popular</a>
+                <a href="#" class="me-3 font-normal">Recently</a>
+                <a href="#" class="font-normal"><i class="ri-moon-line"></i></a>
+              </div>
+            </div>
+            <div class="p-1 md:hidden block">
+              <div class="flex justify-end space-x-5">
+                <a href="#" class="font-normal"><i class="ri-moon-line"></i></a>
+                <a id="nav-toggle" href="#" type="button" class="font-normal"><i class="ri-apps-2-line"></i></a>
+              </div>
+            </div>
+            <div id="nav-menu" class="left-0 top-0 w-screen absolute h-64 drop-shadow">
+              <div class="relative h-full w-full flex flex-col place-content-center place-items-center">
+                <img class="block md:hidden" src="assets\img\leaf-branch-4.png" alt="menu leaf">
+                <div class="absolute right-3 top-2">
+                  <a href="#">
+                    <i class="ri-close-line text-xl"></i>
+                  </a>
+                </div>
+                <div class=" space-y-4">
+                  <a href="#" class="block text-center font-normal">Home</a>
+                  <a href="#" class="block text-center font-normal">About Us</a>
+                  <a href="#" class="block text-center font-normal">Popular</a>
+                  <a href="#" class="block text-center font-normal">Recently</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section pt-96 md:pt-0 md:h-screen md:mb-0 mb-16 flex content-center items-center" id="home">
+        <img class="leaf-1" src="assets\img\leaf-branch-2.png" alt="leaf 1 home">
+        <img class="leaf-2" src="assets\img\leaf-branch-4.png" alt="leaf 2 home">
+
+        <div class="grid grid-cols-11">
+          <div></div>
+          <div class="col-span-9">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div id="home-image" class="container order-first md:order-last ">
+                <img class="mx-auto mb-7" src="assets\img\home-sushi-rolls.png" alt="Image Home">
+              </div>
+              <div id="home-data" class="container order-last md:order-first text-center md:text-left">
+                <h1 class="mb-3">
+                  Enjoy Delicious
+                  <div class="flex items-center justify-center md:justify-start">
+                    <img class="mr-3" src="assets\img\home-sushi-title.png" alt="Image Title">
+                    Sushi Food
+                  </div>
+                </h1>
+                <p class="mb-8">
+                  Enjoy a good diner with best dishes in the restaurant and improve your day.
+                </p>
+                <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 text-white block px-6 rounded-full">
+                  Order Now <i class="ml-3 ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section md:mb-0 mb-16 flex content-center items-center md:mb-32" id="about">
+        <img class="leaf-1" src="assets\img\leaf-branch-1.png" alt="leaf 1 home">
+        <div class="grid grid-cols-11">
+          <div class="col-span-1"></div>
+          <div class="col-span-9">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div id="about-image" class="container order-2 md:order-1 my-auto">
+                <img class="mx-auto" src="assets\img\about-sushi.png" alt="">
+              </div>
+              <div id="about-data" class="container order-1 md:order-2 my-auto text-center md:text-left">
+                <div class="subtitle">About Us</div>
+                <h1 class="mb-8">We Provide <img class="inline" src="assets\img\about-sushi-title.png" alt=""> Healty Food</h1>
+                <p class="md:10/12 lg:w-8/12">
+                  Food comes to us from our relatives, whether they have wings or roots. This is how we consider food. It also has a culture. It has history that passes from generation to generation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1"></div>
+        </div>
+      </section>
+
+      <!--==================== POPULAR ====================-->
+      <section class="popular section md:mb-0 mb-16 flex content-center items-center" id="popular">
+        <div class="w-full grid grid-cols-11">
+          <div class="col-span-1"></div>
+          <div class="col-span-9">
+            <div class="container mx-auto">
+              <div class="text-center mb-16">
+                <div class="subtitle">The Best Food</div>
+                <h2>Popular Dishes</h2>
+              </div>
+              <div class="mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-6 lg:gap-16">
+                <div class="md:col-span-4">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                    <img src="assets\img\popular-onigiri.png" class="mx-auto menu-img" alt="">
+                    <div class="text-center">
+                      <h1>
+                        Onigiri
+                      </h1>
+                      <p>
+                        Japanese Dish
+                      </p>
+                      <div class="grid grid-cols-3 items-center">
+                        <div></div>
+                        <div class="text-center price">
+                          $10.99
+                        </div>
+                        <div class="text-right">
+                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
+                            <i class="ri-shopping-bag-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                    <img src="assets\img\popular-spring-rols.png" class="mx-auto menu-img" alt="">
+                    <div class="text-center">
+                      <h1>
+                        Onigiri
+                      </h1>
+                      <p>
+                        Japanese Dish
+                      </p>
+                      <div class="grid grid-cols-3 items-center">
+                        <div></div>
+                        <div class="text-center price">
+                          $10.99
+                        </div>
+                        <div class="text-right">
+                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
+                            <i class="ri-shopping-bag-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="mx-auto menu-container px-8 pt-28 pb-6 lg:w-64 h-auto rounded-2xl shadow-lg">
+                    <img src="assets\img\popular-sushi-rolls.png" class="mx-auto menu-img" alt="">
+                    <div class="text-center">
+                      <h1>
+                        Onigiri
+                      </h1>
+                      <p>
+                        Japanese Dish
+                      </p>
+                      <div class="grid grid-cols-3 items-center">
+                        <div></div>
+                        <div class="text-center price">
+                          $10.99
+                        </div>
+                        <div class="text-right">
+                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
+                            <i class="ri-shopping-bag-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1"></div>
+        </div>
+      </section>
+
+      <!--==================== RECENTLY ====================-->
+      <section class="recently section md:h-screen md:mb-0 mb-16 flex content-center items-center" id="recently">
+        <img src="assets/img/leaf-branch-2.png" class="leaf-1" alt="">
+        <img src="assets/img/leaf-branch-3.png" class="leaf-2" alt="">
+        <div class="grid grid-cols-11">
+          <div></div>
+          <div class="col-span-9">
+            <div class="container">
+              <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
+                <div class="text-center container relative md:text-left" id="recently-data">
+                  <div class="subtitle mb-2">Recently Addded</div>
+                  <img src="assets/img/spinach-leaf.png" class="spinach-1" alt="">
+                  <h2 class="mb-6">
+                    Sushi Samurai <br>
+                    Salmón Cheese
+                  </h2>
+                  <p class="mb-6">
+                    Take a look at what's new. And do not deprive 
+                    yourself of a good meal, enjoy and be happy.
+                  </p>
+                  <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 text-white block px-6 rounded-full">
+                    Order Now <i class="ml-3 ri-arrow-right-line"></i>
+                  </button>
+                </div>
+                <div class="container" id="recently-image">
+                  <img class="mx-auto" src="assets/img/recently-salmon-sushi.png" alt="Recently image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <!--==================== NEWSLETTER ====================-->
+      <section class="newsletter section flex justify-center items-center mb-16 md:mb-32" id="newsletter">
+        <div class="grid w-full grid-cols-11">
+          <div></div>
+          <div class="col-span-9">
+            <div class="relative">
+              <img src="assets/img/spinach-leaf.png" alt="" class="spinach-1">
+              <div class="container p-8 rounded-3xl newsletter-container">
+                <div class="grid md:grid-cols-2 grid-cols-1">
+                  <div class="img-container">
+                    <img src="assets/img/newsletter-sushi.png" class="md:mx-auto img-newsletter" alt="">
+                  </div>
+                  <div class="container text-center md:my-auto md:text-left">
+                    <div class="subtitle mb-3">
+                      Newsletter
+                    </div>
+                    <h1 class="mb-6 text-white">
+                      Subscribe For <br>
+                      Offer Updates
+                    </h1>
+                    <form action="#" method="post" class="flex p-1 content-between items-center w-full rounded-full border-0 bg-white mx-1">
+                      <input type="email" placeholder="Enter email" name="email" id="email" class="w-6/12 md:w-8/12 text-xs inline bg-transparent outline-0 border-0">
+                      <button class="flex justify-center items-center w-6/12 md:w-4/12 text-xs text-white rounded-full px-3 py-3">
+                        Subscribe <i class="ml-1 ri-send-plane-fill"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer relative overflow-x-hidden">
+      <img class="spinach-leaf" src="assets/img/spinach-leaf.png" alt="footer spinach">
+      <img class="spring-onion" src="assets/img/spring-onion.png" alt="footer onion">
+      <img class="leaf-branch" src="assets/img/leaf-branch-4.png" alt="footer leaf 4">
+      <div class="grid grid-cols-11">
+        <div class="cols-span-1"></div>
+        <div class="col-span-9">
+          <div class="grid grid-cols-10 relative mb-8" id="footer-content">
+            <div class="md:col-span-2 col-span-10 mb-12">
+              <div class="inline-flex logo-title font-bold mb-8">
+                <img src="assets/img/logo.png" class="logo mr-2" alt="">
+                Sushi
+              </div>
+              <p>
+                Food for the body is not <br>
+                enough. There must be food <br>
+                for the soul.
+              </p>
+            </div>
+            <div class="md:col-span-2 col-span-5 mb-12">
+              <div class="font-bold mb-8">
+                Main Menu
+              </div>
+              <a href="#" class="mb-2 block">About</a>
+              <a href="#" class="mb-2 block">Menus</a>
+              <a href="#" class="mb-2 block">Offer</a>
+              <a href="#" class="mb-2 block">Events</a>
+            </div>
+            <div class="md:col-span-2 col-span-5 mb-12">
+              <div class="font-bold mb-8">
+                Information
+              </div>
+              <a href="#" class="mb-2 block">Contact</a>
+              <a href="#" class="mb-2 block">Order & Return</a>
+              <a href="#" class="mb-2 block">Videos</a>
+              <a href="#" class="mb-2 block">Reservation</a>
+            </div>
+            <div class="md:col-span-2 col-span-5 mb-12">
+              <div class="font-bold mb-8">
+                Address
+              </div>
+              <a href="#" class="mb-2 block">
+                Av. Hacienda 1234 <br>
+                Lima 4321, Perú 
+                9AM - 11PM
+              </a>
+            </div>
+            <div class="md:col-span-2 col-span-5 mb-12">
+              <div class="font-bold mb-8">
+                Social Media
+              </div>
+              <div class="w-full mb-2 flex content-start align-center">
+                <a href="#" class="social-link mr-3">
+                  <i class="ri-facebook-circle-fill"></i>
+                </a>
+                <a href="#" class="social-link mr-3">
+                  <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="#" class="social-link mr-3">
+                  <i class="ri-twitter-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2" id="footer-info">
+            <div class="order-2 lg:order-1 mb-6">
+              <div class="text-center lg:text-left">
+                &#169; Copyright Bedimcode. All rights reserved
+              </div>
+            </div>
+            <div class="order-1 lg:order-2 mb-6">
+              <div class="flex justify-around items-center">
+                <img src="assets/img/footer-card-1.png" alt="footer-card-1" class="inline-block payment">
+                <img src="assets/img/footer-card-2.png" alt="footer-card-2" class="inline-block payment">
+                <img src="assets/img/footer-card-3.png" alt="footer-card-3" class="inline-block payment">
+                <img src="assets/img/footer-card-4.png" alt="footer-card-4" class="inline-block payment">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cols-span-1"></div>
+      </div>
+    </footer>
+
+    <a href="#" class="scroll-up fixed shadow p-2 rounded z-10 right-4" id="scroll-up"> 
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--========== SCROLL UP ==========-->
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
