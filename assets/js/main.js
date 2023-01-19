@@ -11,8 +11,14 @@ $(document).ready(function () {
   $(window).scroll(function(){
     if($(this).scrollTop()>= aTop){
       $('#scroll-up').css('bottom', '3rem');
+      setTimeout(() => {
+        $('#whatsapp').css('bottom', '3rem');
+      }, 300);
     }else{
       $('#scroll-up').css('bottom', '-50%');
+      setTimeout(() => {
+        $('#whatsapp').css('bottom', '-50%');
+      }, 300);
     }
     if($(this).scrollTop()>= 8){
       navBlock.css('height', `${navBar-8}px`);

@@ -18,7 +18,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     
 
-    <title>Sushi Website</title>
+    <title>Xi Bam Boo</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -27,8 +27,10 @@
         <div class="container mx-auto">
           <div class="flex justify-between content-end">
             <div class="p-1 flex content-end">
-              <img src="assets/img/logo.png" alt="" class="inline mr-2 h-6 w-6">
-              <h1 class="inline text-lg font-semibold">Sushi</h1>
+              <div class="logo-bg"></div>
+              <div class="logo-bg-shadow"></div>
+              <img src="assets/img/logo.png" alt="" class="logo">
+              <!-- <h1 class="inline text-lg font-semibold">Sushi</h1> -->
             </div>
             <div class="p-1 md:block hidden">
               <div class="flex justify-end space-x-6">
@@ -82,18 +84,23 @@
               </div>
               <div id="home-data" class="container order-last md:order-first text-center md:text-left">
                 <h1 class="mb-3">
-                  Enjoy Delicious
+                  Nikmati Makanan
                   <div class="flex items-center justify-center md:justify-start">
                     <img class="mr-3" src="assets\img\home-sushi-title.png" alt="Image Title">
-                    Sushi Food
+                    <div class="whitespace-nowrap">
+                      Khas Nusantara
+                    </div>
                   </div>
                 </h1>
                 <p class="mb-8">
-                  Enjoy a good diner with best dishes in the restaurant and improve your day.
+                  Nikmati makan dengan hidangan terbaik di restoran dan perbarui harimu.
+                  <!-- Enjoy a good diner with best dishes in the restaurant and improve your day. -->
                 </p>
-                <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 text-white block px-6 rounded-full">
-                  Order Now <i class="ml-3 ri-arrow-right-line"></i>
-                </button>
+                <a href="https://wa.me/6281323458010/?text=Hai!+Saya+ingin+pesan+meja" target="_blank" rel="noopener noreferrer">
+                  <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 block px-6 rounded-full">
+                    Pesan Sekarang <i class="ml-3 ri-arrow-right-line"></i>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -113,9 +120,10 @@
               </div>
               <div id="about-data" class="container order-1 md:order-2 my-auto text-center md:text-left">
                 <div class="subtitle">About Us</div>
-                <h1 class="mb-8">We Provide <img class="inline" src="assets\img\about-sushi-title.png" alt=""> Healty Food</h1>
+                <h1 class="mb-8 whitespace-nowrap">Menghadirkan <img class="inline" src="assets\img\about-sushi-title.png" alt=""> <br> Hidangan Nusantara</h1>
                 <p class="md:10/12 lg:w-8/12">
-                  Food comes to us from our relatives, whether they have wings or roots. This is how we consider food. It also has a culture. It has history that passes from generation to generation.
+                  Xi Bam Boo menghadirkan makanan nusantara yang membuat kamu merasakan citarasa khas dari kami.
+                  <!-- Food comes to us from our relatives, whether they have wings or roots. This is how we consider food. It also has a culture. It has history that passes from generation to generation. -->
                 </p>
               </div>
             </div>
@@ -234,7 +242,7 @@
                     Take a look at what's new. And do not deprive 
                     yourself of a good meal, enjoy and be happy.
                   </p>
-                  <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 text-white block px-6 rounded-full">
+                  <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 block px-6 rounded-full">
                     Order Now <i class="ml-3 ri-arrow-right-line"></i>
                   </button>
                 </div>
@@ -258,19 +266,19 @@
               <div class="container p-8 rounded-3xl newsletter-container">
                 <div class="grid md:grid-cols-2 grid-cols-1">
                   <div class="img-container">
-                    <img src="assets/img/newsletter-sushi.png" class="md:mx-auto img-newsletter" alt="">
+                    <img src="assets/img/recently-salmon-sushi.png" class="md:mx-auto img-newsletter" alt="">
                   </div>
                   <div class="container text-center md:my-auto md:text-left">
                     <div class="subtitle mb-3">
                       Newsletter
                     </div>
-                    <h1 class="mb-6 text-white">
+                    <h1 class="mb-6">
                       Subscribe For <br>
                       Offer Updates
                     </h1>
-                    <form action="#" method="post" class="flex p-1 content-between items-center w-full rounded-full border-0 bg-white mx-1">
+                    <form action="#" method="post" class="flex p-1 content-between items-center w-full rounded-full border-0 mx-1">
                       <input type="email" placeholder="Enter email" name="email" id="email" class="w-6/12 md:w-8/12 text-xs inline bg-transparent outline-0 border-0">
-                      <button class="flex justify-center items-center w-6/12 md:w-4/12 text-xs text-white rounded-full px-3 py-3">
+                      <button class="flex justify-center items-center w-6/12 md:w-4/12 text-xs rounded-full px-3 py-3">
                         Subscribe <i class="ml-1 ri-send-plane-fill"></i>
                       </button>
                     </form>
@@ -296,7 +304,7 @@
             <div class="md:col-span-2 col-span-10 mb-12">
               <div class="inline-flex logo-title font-bold mb-8">
                 <img src="assets/img/logo.png" class="logo mr-2" alt="">
-                Sushi
+                Xi Bam Boo
               </div>
               <p>
                 Food for the body is not <br>
@@ -317,16 +325,16 @@
               <div class="font-bold mb-8">
                 Information
               </div>
-              <a href="#" class="mb-2 block">Contact</a>
-              <a href="#" class="mb-2 block">Order & Return</a>
+              <a href="https://wa.me/6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Contact</a>
+              <a href="https://wa.me/6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Order & Return</a>
               <a href="#" class="mb-2 block">Videos</a>
-              <a href="#" class="mb-2 block">Reservation</a>
+              <a href="https://wa.me/6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Reservation</a>
             </div>
             <div class="md:col-span-2 col-span-5 mb-12">
               <div class="font-bold mb-8">
                 Address
               </div>
-              <a href="#" class="mb-2 block">
+              <a href="https://goo.gl/maps/rW5xjUmcAqAfPRPX6" target="_blank" rel="noopener noreferrer" class="mb-2 block">
                 Sriwijaya street No.98 <br>
                 Kota Bandung 40253 <br>
                 10AM - 10PM
@@ -337,13 +345,13 @@
                 Social Media
               </div>
               <div class="w-full mb-2 flex content-start align-center">
-                <a href="#" class="social-link mr-3">
+                <a href="#" target="_blank" rel="nooepener noreferrer" class="social-link mr-3">
                   <i class="ri-facebook-circle-fill"></i>
                 </a>
-                <a href="#" class="social-link mr-3">
+                <a href="https://www.instagram.com/xibamboo_98/" target="_blank" rel="nooepener noreferrer" class="social-link mr-3">
                   <i class="ri-instagram-fill"></i>
                 </a>
-                <a href="#" class="social-link mr-3">
+                <a href="#" target="_blank" rel="nooepener noreferrer" class="social-link mr-3">
                   <i class="ri-twitter-fill"></i>
                 </a>
               </div>
@@ -352,7 +360,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2" id="footer-info">
             <div class="order-2 lg:order-1 mb-6">
               <div class="text-center lg:text-left">
-                &#169; Copyright Bedimcode. All rights reserved
+                &#169; Copyright Xibamboo. All rights reserved
               </div>
             </div>
             <div class="order-1 lg:order-2 mb-6">
@@ -371,6 +379,9 @@
 
     <a href="#" class="scroll-up fixed shadow p-2 rounded z-10 right-4" id="scroll-up"> 
       <i class="ri-arrow-up-line"></i>
+    </a>
+    <a href="https://wa.me/6281323458010/?text=Hai!+Saya+ingin+pesan+meja" target="_blank" rel="noopener noreferrer" class="float" id="whatsapp">
+      <i class="ri-whatsapp-line my-float"></i>
     </a>
 
     <!--========== SCROLL UP ==========-->

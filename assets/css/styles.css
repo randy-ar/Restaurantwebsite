@@ -5,18 +5,26 @@
 :root {
   --header-height: 3.5rem;
 
+  --color-1: #174A29;
+  --color-2: #F6DAAA;
+  --color-3: #10331C;
+  --color-4: #332D23;
+  --color-5: #4A2513;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(19, 64%, 54%);
-  --first-color-alt: hsl(19, 64%, 52%);
+  /* --first-color: hsl(19, 64%, 54%); */
+  --first-color: #174A29;
+  --second-color: #F6DAAA;
+  /* --first-color-alt: hsl(19, 64%, 52%); */
+  --first-color-alt: rgb(33, 84, 51);
   --title-color: hsl(19, 16%, 15%);
-  --banner-color: hsl(19, 16%, 15%);
-  --text-color: hsl(19, 16%, 35%);
-  --text-color-light: hsl(19, 8%, 55%);
-  --body-color: hsl(19, 100%, 96%);
-  --header-color: hsla(18, 100%, 96%, 0.85);
-  --container-color: hsl(19, 100%, 97%);
-  --bg-header: #FCEFE6;
+  --banner-color: #10331C;
+  --text-color: #332D23;
+  --text-white: #fefefe;
+  --body-color: #fefefe;
+  --header-color: #fefefe85;
+  --container-color: #F6DAAA;
+  --bg-header: #fefefe;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -42,7 +50,7 @@
 @media screen and (min-width: 1024px) {
   :root {
     --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
+    --h1-font-size: 2.5rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -76,7 +84,6 @@ body.dark-theme{
   --first-color-alt: hsl(19, 64%, 52%);
   --title-color: hsl(19, 24%, 85%);
   --text-color: hsl(19, 16%, 65%);
-  --text-color-light: hsl(19, 24%, 65%);
   --body-color: hsl(19, 12%, 8%);
   --header-color: hsla(18, 12%, 8%, 0.85);
   --container-color: hsl(19, 10%, 10%);
@@ -131,11 +138,18 @@ p{
   color: var(--text-color);
 }
 
+button{
+  color: var(--second-color) !important;
+}
 button i{
   transition: transform .3s;
 }
 button:hover i{
   transform: translateX(.25rem);
+}
+
+.dark-button{
+  color: var(--text-color) !important;
 }
 .dark-button:hover{
   color: var(--first-color-alt);
@@ -144,6 +158,7 @@ button:hover i{
 .subtitle{
   font-family: var(--subtitle-font);
   font-size: var(--h1-font-size);
+  font-weight: 700;
   color: var(--first-color);
 }
 
@@ -163,6 +178,35 @@ button:hover i{
   background-color: var(--header-color);
   z-index: 200;
   backdrop-filter: blur(10px);
+}
+
+#header .logo-bg{
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  top: 5px;
+  left: 25px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--body-color);
+  /* box-shadow: 0px .5px 1px #999; */
+}
+#header .logo-bg-shadow{
+  position: absolute;
+  z-index: -2;
+  border-radius: 50%;
+  top: 9px;
+  left: 29px;
+  width: 66px;
+  height: 66px;
+  box-shadow: 0px 2px 3px #999;
+  transform: rotate(60deg);
+}
+#header .logo{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 60px;
 }
 
 #nav-menu{
@@ -286,7 +330,7 @@ button:hover i{
   background-color: var(--first-color-alt);
 }
 .menu-container:hover .menu-img{
-  transform: translateY(-.25rem);
+  transform: translateY(-.4rem);
 }
 
 /* Recently */
@@ -338,15 +382,18 @@ button:hover i{
 /* Newsletter  */
 #newsletter {
   position: relative;
+  color: var(--second-color) !important;
 }
-#newletter h2{
-  font-size: var(--h1-font-size);
-  font-family: var(--title-font);
+#newsletter h1{
+  color: var(--text-white);
+}
+#newsletter .subtitle{
+  color: var(--text-white);
 }
 #newsletter .newsletter-container{
   position: relative;
   background-color: var(--banner-color);
-  color: var(--text-color-light);
+  color: var(--second-color);
   overflow: hidden;
 }
 #newsletter .img-newsletter{
@@ -355,8 +402,13 @@ button:hover i{
   left: -140px;
   width: 220px;
 }
+#newsletter form{
+  background-color: var(--second-color);
+  color: var(--text-white);
+}
 #newsletter button{
   background-color: var(--first-color);
+  color: var(--second-color);
   cursor: pointer;
 }
 #newsletter .spinach-1{
@@ -425,6 +477,8 @@ button:hover i{
 .scroll-up{
   display: block;
   bottom: -5rem;
+  left: 30px;
+  width: fit-content;
   background-color: var(--container-color);
   color: var(--first-color);
   transition: all .3s;
@@ -432,6 +486,37 @@ button:hover i{
 .scroll-up:hover{
   color: var(--first-color-alt);
   transform: translateY(-.25rem);
+}
+
+/* FLoat Button */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom: -5rem;
+	right: 30px;
+	background-color:var(--first-color);
+	color:var(--second-color);
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 40px;
+  transition: all .5s;
+}
+
+.float:hover{
+  color: var(--text-white);
+  text-shadow: #fff;
+  background-color: var(--first-color-alt);
+  box-shadow: 2px 2px 5px #999;
+}
+
+.my-float{
+	/* margin-top:22px;
+  font-weight: 30px; */
 }
 
 /* RESPONSIVE DESIGN MD */
