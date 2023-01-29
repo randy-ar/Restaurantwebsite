@@ -1,0 +1,80 @@
+/* RESPONSIVE DESIGN MD */
+@media screen and (min-width: 768px) {
+  #header .logo-bg{
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    top: 5px;
+    left: 25px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--header-color);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0px .5px 1px #999; */
+  }
+  #header .logo-bg-shadow{
+    position: absolute;
+    z-index: -2;
+    border-radius: 50%;
+    top: 9px;
+    left: 27px;
+    width: 66px;
+    height: 66px;
+    box-shadow: 0px 2px 1px #aaa;
+    background-color: transparent;
+    transform: rotate(12deg);
+  }
+  #header .logo{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 60px;
+  }
+
+  #home{
+    height: 100vh;
+  }
+  #home .img-home{
+    width: 400px;
+  }
+  /* #home h1 img{
+    width: 70px;
+  } */
+
+  #about h1 img {
+    width: 70px;
+  }
+  #about img {
+    width: 400px;
+  }
+
+  .menu-img{
+    width: 185px;
+    top: -4.5rem;
+  }
+  
+  #recently img{
+    width: 380px;
+  }
+
+  #newsletter .img-newsletter{
+    position: inherit;
+    top: auto;
+    left: auto;
+    width: 240px;
+  }
+  #newsletter .spinach-1{
+    width: 50px;
+    bottom: -2.5rem;
+    right: -1rem;
+  }
+
+  .footer .spring-onion{
+    right: 8rem;
+  }
+  .footer .spinach-leaf{
+    width: 60px;
+    bottom: 5rem;
+    left: -1.5rem;
+  }
+}

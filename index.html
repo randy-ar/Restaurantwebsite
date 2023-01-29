@@ -13,15 +13,17 @@
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
+    
     <!-- Tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     
-
+    
     <title>Xi Bam Boo</title>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles-md.css">
+    <link rel="stylesheet" href="assets/css/styles-lg.css">
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -74,7 +76,7 @@
       <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section py-16 md:py-0 md:h-screen md:mb-0 mb-16 flex content-center items-center" id="home">
+      <section class="home section py-16 md:py-0 md:mb-0 mb-16 flex content-center items-center" id="home">
         <img class="leaf-1" src="assets\img\leaf-branch-2.png" alt="leaf 1 home">
         <img class="leaf-2" src="assets\img\leaf-branch-4.png" alt="leaf 2 home">
 
@@ -82,8 +84,8 @@
           <div></div>
           <div class="col-span-9">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div id="home-image" class="container order-first md:order-last ">
-                <img class="mx-auto mb-7" src="assets\img\home-sushi-rolls.png" alt="Image Home">
+              <div id="home-image" class="container order-first md:order-last relative">
+                <img class="mx-auto img-home" src="./assets/img/homepage/2.png" alt="Image Home">
               </div>
               <div id="home-data" class="container order-last md:order-first text-center md:text-left">
                 <h1 class="mb-3">
@@ -113,13 +115,13 @@
 
       <!--==================== ABOUT ====================-->
       <section class="about section md:mb-0 mb-16 flex content-center items-center md:mb-32" id="about">
-        <img class="leaf-1" src="assets\img\leaf-branch-1.png" alt="leaf 1 home">
+        <img class="leaf-1" src="./assets/img/leaf-branch-1.png" alt="leaf 1 home">
         <div class="grid grid-cols-11">
           <div class="col-span-1"></div>
           <div class="col-span-9">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div id="about-image" class="container order-2 md:order-1 my-auto">
-                <img class="mx-auto" src="assets\img\about-sushi.png" alt="">
+                <img class="mx-auto" src="./assets/img/homepage/1.png" alt="">
               </div>
               <div id="about-data" class="container order-1 md:order-2 my-auto text-center md:text-left">
                 <div class="subtitle">About Us</div>
@@ -145,21 +147,21 @@
                 <div class="subtitle">The Best Food</div>
                 <h2>Popular Dishes</h2>
               </div>
-              <div class="mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-6 lg:gap-16">
+              <div class="mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-6 lg:gap-16" id="list-menu">
                 <div class="md:col-span-4">
                   <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\popular-onigiri.png" class="mx-auto menu-img" alt="">
+                    <img src="./assets/img/menu/ayambakar.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
-                      <h1>
-                        Onigiri
+                      <h1 class="whitespace-nowrap">
+                        Ayam Bakar
                       </h1>
                       <p>
-                        Japanese Dish
+                        Best Seller
                       </p>
-                      <div class="grid grid-cols-3 items-center">
+                      <div class="flex justify-between items-center">
                         <div></div>
                         <div class="text-center price">
-                          $10.99
+                          Rp.30000
                         </div>
                         <div class="text-right">
                           <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
@@ -172,18 +174,18 @@
                 </div>
                 <div class="md:col-span-4">
                   <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\popular-spring-rols.png" class="mx-auto menu-img" alt="">
+                    <img src="./assets/img/menu/buntut.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
-                      <h1>
-                        Spring Rolls
+                      <h1 class="whitespace-nowrap">
+                        Buntut Bakar
                       </h1>
                       <p>
-                        Japanese Dish
+                        Best Seller
                       </p>
-                      <div class="grid grid-cols-3 items-center">
+                      <div class="flex justify-between items-center">
                         <div></div>
                         <div class="text-center price">
-                          $15.99
+                          Rp.45000
                         </div>
                         <div class="text-right">
                           <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
@@ -196,18 +198,18 @@
                 </div>
                 <div class="md:col-span-4">
                   <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\popular-sushi-rolls.png" class="mx-auto menu-img" alt="">
+                    <img src="./assets/img/menu/ayamungkep.png" class="mx-auto menu-img" alt="">
                     <div class="text-center">
-                      <h1>
-                        Sushi Rolls
+                      <h1 class="whitespace-nowrap">
+                        Ayam Ungkep
                       </h1>
                       <p>
-                        Japanese Dish
+                        Best Seller
                       </p>
-                      <div class="grid grid-cols-3 items-center">
+                      <div class="flex justify-between items-center">
                         <div></div>
                         <div class="text-center price">
-                          $19.99
+                          Rp.30000
                         </div>
                         <div class="text-right">
                           <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
@@ -218,6 +220,11 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="text-center mt-16 mb-6">
+                <button class="bg-transparent showmore mx-auto flex justify-between items-center">
+                  Show More <i class="ri-arrow-down-s-line"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -235,22 +242,24 @@
             <div class="container">
               <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
                 <div class="text-center container relative md:text-left" id="recently-data">
-                  <div class="subtitle mb-2">Recently Addded</div>
-                  <img src="assets/img/spinach-leaf.png" class="spinach-1" alt="">
+                  <div class="subtitle mb-2">Popular Dish</div>
+                  <img src="./assets/img/homepage/lettuce1.png" class="spinach-1" alt="">
                   <h2 class="mb-6">
-                    Sushi Samurai <br>
-                    Salmón Cheese
+                    Nasi Ayam Bakar <br>
+                    Xii Bam Boo
                   </h2>
                   <p class="mb-6">
-                    Take a look at what's new. And do not deprive 
-                    yourself of a good meal, enjoy and be happy.
+                    Lihatlah sajian best seller dari restoran kami.
+                    Sajian best seller terbaik dengan cita rasa yang nikmat.
+                    <!-- Take a look at what's new. And do not deprive 
+                    yourself of a good meal, enjoy and be happy. -->
                   </p>
                   <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 block px-6 rounded-full">
                     Order Now <i class="ml-3 ri-arrow-right-line"></i>
                   </button>
                 </div>
                 <div class="container" id="recently-image">
-                  <img class="mx-auto" src="assets/img/recently-salmon-sushi.png" alt="Recently image">
+                  <img class="mx-auto" src="./assets/img/homepage/4 - Copy.png" alt="Recently image">
                 </div>
               </div>
             </div>
@@ -265,11 +274,11 @@
           <div></div>
           <div class="col-span-9">
             <div class="relative">
-              <img src="assets/img/spinach-leaf.png" alt="" class="spinach-1">
+              <img src="./assets/img/homepage/leaf.png" alt="" class="spinach-1">
               <div class="container p-8 rounded-3xl newsletter-container">
                 <div class="grid md:grid-cols-2 grid-cols-1">
                   <div class="img-container">
-                    <img src="assets/img/recently-salmon-sushi.png" class="md:mx-auto img-newsletter" alt="">
+                    <img src="./assets/img/homepage/4.png" class="md:mx-auto img-newsletter" alt="">
                   </div>
                   <div class="container text-center md:my-auto md:text-left">
                     <div class="subtitle mb-3">
@@ -297,7 +306,7 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer relative overflow-x-hidden">
-      <img class="spinach-leaf" src="assets/img/spinach-leaf.png" alt="footer spinach">
+      <img class="spinach-leaf" src="./assets/img/homepage/27391.png" alt="footer spinach">
       <img class="spring-onion" src="assets/img/spring-onion.png" alt="footer onion">
       <img class="leaf-branch" src="assets/img/leaf-branch-4.png" alt="footer leaf 4">
       <div class="grid grid-cols-11">
@@ -310,9 +319,12 @@
                 Xi Bam Boo
               </div>
               <p>
-                Food for the body is not <br>
+                Cafe dan resto yang 
+                menyajikan menu nusantara, fasilitas
+                live music dan gathering.
+                <!-- Food for the body is not <br>
                 enough. There must be food <br>
-                for the soul.
+                for the soul. -->
               </p>
             </div>
             <div class="md:col-span-2 col-span-5 mb-12">
@@ -387,13 +399,17 @@
       <i class="ri-whatsapp-line my-float"></i>
     </a>
 
-    <!--========== SCROLL UP ==========-->
+    <!--========== JQUERY ==========-->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <!--=========== AXIOS ============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.6/axios.min.js" integrity="sha512-RUkwGPgBmjCwqXpCRzpPPmGl0LSFp9v5wXtmG41+OS8vnmXybQX5qiG5adrIhtO03irWCXl+z0Jrst6qeaLDtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/fetchMenu.js"></script>
   </body>
 </html>

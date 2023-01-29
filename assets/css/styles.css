@@ -31,7 +31,7 @@
   --body-font: "Poppins", sans-serif;
   --title-font: "Lora", serif;
   --subtitle-font: "Dancing Script", cursive;
-  --biggest-font-size: 2.25rem;
+  --biggest-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -128,10 +128,10 @@ a:active{
   color: var(--first-color);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+/* img, video {
+  max-width: inherit !important;
+  height: auto !important;
+} */
 
 p{
   font-size: var(--normal-font-size);
@@ -186,27 +186,29 @@ button:hover i{
   border-radius: 50%;
   top: 5px;
   left: 25px;
-  width: 70px;
-  height: 70px;
-  background-color: var(--body-color);
+  width: 60px;
+  height: 60px;
+  background-color: var(--header-color);
+  backdrop-filter: blur(10px);
   /* box-shadow: 0px .5px 1px #999; */
 }
 #header .logo-bg-shadow{
   position: absolute;
   z-index: -2;
   border-radius: 50%;
-  top: 9px;
-  left: 29px;
-  width: 66px;
-  height: 66px;
-  box-shadow: 0px 2px 3px #999;
-  transform: rotate(60deg);
+  top: 3.5px;
+  left: 24.5px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 1.5px #aaaaaa77;
+  background-color: transparent;
+  transform: rotate(8deg);
 }
 #header .logo{
   position: absolute;
   top: 10px;
   left: 30px;
-  width: 60px;
+  width: 50px;
 }
 
 #nav-menu{
@@ -228,11 +230,11 @@ button:hover i{
 /* HOME STYLE  */
 #home{
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
-#home img{
-  width: 300px;
+#home .img-home{
+  width: 420px;
+  transform: scale(-1, 1);
 }
 #home .leaf-1,.leaf-2{
   position: absolute;
@@ -255,7 +257,7 @@ button:hover i{
   font-family: var(--title-font);
 }
 #home h1 img{
-  width: 40px;
+  width: var(--biggest-font-size);
 }
 #home button{
   background-color: var(--first-color);
@@ -315,7 +317,7 @@ button:hover i{
   position: absolute;
   inset: 0;
   z-index: 10;
-  top: -2.5rem;
+  top: -5rem;
   width: 220px;
   margin: 0 auto;
   transition: transform .4s;
@@ -339,11 +341,12 @@ button:hover i{
   overflow-x: hidden;
 }
 #recently .spinach-1{
-  width: 1.25rem;
+  height: var(--biggest-font-size);
+  width: auto;
   position: absolute;
   top: 5rem;
-  right: 1rem;
-  transform: rotate(15deg);
+  right: -1rem;
+  transform: rotate(250deg);
   z-index: -1;
 }
 #recently .leaf-1, .leaf-2{ 
@@ -413,11 +416,11 @@ button:hover i{
 }
 #newsletter .spinach-1{
   position: absolute;
-  width: 20px;
-  bottom: -1rem;
-  right: 1rem;
+  width: 40px;
+  bottom: -1.5rem;
+  right: 0rem;
   z-index: 10;
-  transform: rotate(45deg);
+  transform: rotate(28deg);
 }
 
 /* FOOTER STYLE  */
@@ -442,8 +445,9 @@ button:hover i{
   transform: rotate(-45deg);
 }
 .footer .spinach-leaf{
-  bottom: 8rem;
-  left: 3rem;
+  width: 40px;
+  bottom: 7rem;
+  left: 1rem;
   transform: rotate(30deg);
 }
 .footer .leaf-branch{
@@ -519,88 +523,11 @@ button:hover i{
   font-weight: 30px; */
 }
 
-/* RESPONSIVE DESIGN MD */
-@media screen and (min-width: 768px) {
-  #home img{
-    width: 400px;
-  }
-  #home h1 img{
-    width: 70px;
-  }
-
-  #about h1 img {
-    width: 70px;
-  }
-  #about img {
-    width: 400px;
-  }
-
-  .menu-img{
-    top: -1.5rem;
-  }
-  
-  #recently img{
-    width: 380px;
-  }
-  #recently .spinach-1{
-    width: 25px;
-  }
-
-  #newsletter .img-newsletter{
-    position: inherit;
-    top: auto;
-    left: auto;
-    width: 240px;
-  }
-
-  .footer .spring-onion{
-    right: 8rem;
-  }
-  .footer .spinach-leaf{
-    bottom: 8rem;
-  }
+.showmore{
+  color: var(--text-color) !important;
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
 }
-
-/* RESPONSIVE DESIGN LG */
-@media screen and (min-width: 1024px) {
-  #home img{
-    width: 640px;
-  }
-  #home h1 img{
-    width: 70px;
-  }
-  #about h1 img {
-    width: 70px;
-  }
-  #about img {
-    width: 480px;
-  }
-
-  .menu-img{
-    top: -2.5rem;
-  }
-
-  #recently img{
-    width: 440px;
-  }
-  #recently .spinach-1{
-    right: -15%;
-    width: 30px;
-  }
-
-  #newsletter .img-newsletter{
-    position: inherit;
-    top: auto;
-    left: auto;
-    width: 320px;
-  }
-
-  .footer .spring-onion{
-    right: 12rem;
-  }
-  .footer .spinach-leaf{
-    left: 8rem;
-    bottom: 4rem;
-  }
+.showmore:hover{
+  color: var(--first-color-alt) !important;
 }
-

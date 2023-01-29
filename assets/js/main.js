@@ -48,6 +48,10 @@ $(document).ready(function () {
         });
     });
   }
+  $('.showmore').on('click', function(){
+    $('#list-menu .hidden').removeClass('hidden');
+    $('.showmore').addClass('hidden');
+  });
 });
 
 function darkTheme() {
