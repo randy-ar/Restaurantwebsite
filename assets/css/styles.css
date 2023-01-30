@@ -25,6 +25,7 @@
   --header-color: #fefefe85;
   --container-color: #F6DAAA;
   --bg-header: #fefefe;
+  --border-color: #aaaaaa77;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -59,6 +60,48 @@
   }
 }
 
+/* =============ANIMATION============ */
+@keyframes floating-spinach-recently {
+  0% {
+    transform: rotate(250deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(250deg) translate(-20px, -5px);
+  }
+
+  100%{
+    transform: rotate(250deg) translate(0px, 0px);
+  }
+}
+@keyframes floating-aksara-1-recently {
+  0% {
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(75deg) translate(20px, -5px);
+  }
+
+  100%{
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+}
+
+@keyframes floating-aksara-2-recently {
+  0% {
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(115deg) translate(-20px, -5px);
+  }
+
+  100%{
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+}
+
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -89,6 +132,7 @@ body.dark-theme{
   --container-color: hsl(19, 10%, 10%);
   --bg-header: hsl(18, 12%, 9%);
   --banner-color: hsl(19, 16%, 15%);
+  --border-color: #0f0f0f77;
 }
 
 .dark-theme .newsletter-container{
@@ -200,7 +244,7 @@ button:hover i{
   left: 24.5px;
   width: 60px;
   height: 60px;
-  box-shadow: 0px 1.5px #aaaaaa77;
+  box-shadow: 0px 1.5px var(--border-color);
   background-color: transparent;
   transform: rotate(8deg);
 }
@@ -304,6 +348,17 @@ button:hover i{
   position: relative;
   overflow: visible;
 }
+.menu-wrapper{
+  position: inherit;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.menu-wrapper.hide{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
 .menu-container p{
   font-size: var(--smaller-font-size);
   margin-bottom: 1rem;
@@ -348,7 +403,11 @@ button:hover i{
   right: -1rem;
   transform: rotate(250deg);
   z-index: -1;
+  animation: floating-spinach-recently 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
 #recently .leaf-1, .leaf-2{ 
   position: absolute;
   opacity: .2;
@@ -378,10 +437,39 @@ button:hover i{
 #recently button i{
   font-size: 1.5rem;
 }
-#recently img{
+#recently-image{
+  position: relative;
+}
+#recently-image .img{
   width: 220px;
 }
-
+#recently-image .svg-1, .svg-2, .svg-3{
+  position: absolute;
+  height: var(--biggest-font-size);
+  width: auto;
+  transform: rotate(90deg);
+}
+#recently-image .svg-1{
+  top: 10px;
+  right: 30px;
+  animation: floating-aksara-1-recently 6000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#recently-image .svg-2{
+  bottom: 10px;
+  right: 30%;
+  animation: floating-aksara-2-recently 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#recently-image .svg-3{
+  top: 60%;
+  left: 10px;
+  animation: floating-aksara-1-recently 7000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 /* Newsletter  */
 #newsletter {
   position: relative;
@@ -523,11 +611,11 @@ button:hover i{
   font-weight: 30px; */
 }
 
-.showmore{
+.showmore, .showless{
   color: var(--text-color) !important;
   font-family: var(--title-font);
   font-size: var(--h2-font-size);
 }
-.showmore:hover{
+.showmore:hover, .showless:hover{
   color: var(--first-color-alt) !important;
 }

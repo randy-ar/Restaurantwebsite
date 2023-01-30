@@ -1,4 +1,5 @@
 var list_menu = []
+var showed = 3
 
 function fetchMenu(callback = () => {}) {
   let link = 'https://api.jsonbin.io/v3/b/63d69a91ace6f33a22cc5ba0'
@@ -20,12 +21,12 @@ function renderMenu(list_menu){
   html = ``;
   for (let index = 0; index < list_menu.length; index++) {
     const menu = list_menu[index];
-    let cls = '';
-    if(index > 2){
-      cls = 'hidden'
+    let cls = ''
+    if(index+1 > showed){
+      cls = 'hide'
     }
     html += `
-    <div class="md:col-span-4 ${cls}">
+    <div class="md:col-span-4 menu-wrapper ${cls}" id="menu-container-${index}">
       <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
         <img src="./assets/img/menu/${menu.image}.png" class="mx-auto menu-img" alt="">
         <div class="text-center">
@@ -54,6 +55,35 @@ function renderMenu(list_menu){
   $('#list-menu').html(html)
 }
 
-$(()=>{
+function showMenu(list_menu) {
+  for (let index = 0; index < list_menu.length; index++) {
+    const menu = list_menu[index];
+    if(index < showed){
+      $(`#menu-container-${index}`).removeClass('hide');
+    }else{
+      $(`#menu-container-${index}`).addClass('hide');
+    }
+  }
+}
+
+$(()=>{ 
   fetchMenu(renderMenu);
+
+  $('.showmore').on('click', function(){
+    showed += 3
+    showMenu(list_menu);
+    if(showed >= list_menu.length){
+      $('.showmore').addClass('hidden');
+      $('.showless').removeClass('hidden');
+    }
+  });
+  $('.showless').on('click', function(){
+    showed = 3
+    showMenu(list_menu);
+    $('.showmore').removeClass('hidden');
+    $('.showless').addClass('hidden');
+    $('a[href^="#popular"]').trigger('click');
+  });
+
+
 })

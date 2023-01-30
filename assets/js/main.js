@@ -48,10 +48,11 @@ $(document).ready(function () {
         });
     });
   }
-  $('.showmore').on('click', function(){
-    $('#list-menu .hidden').removeClass('hidden');
-    $('.showmore').addClass('hidden');
+
+  $('#button-recently').on('click', function(){
+    $('#link-recently')[0].click();
   });
+  
 });
 
 function darkTheme() {
@@ -61,6 +62,13 @@ function darkTheme() {
   }else{
     $('.dark-button').html('<i class="ri-moon-line"></i>');
   }
+}
+
+function submitForm(){
+  let text = encodeURI($('#email').val());
+  $('#link-newsletter').attr('href', `https://wa.me/6281323458010/?text=${text}`);
+  $('#link-newsletter')[0].click();
+  return false;
 }
 
 // Scroll reveal

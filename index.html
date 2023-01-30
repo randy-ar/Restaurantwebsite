@@ -41,8 +41,8 @@
               <div class="flex justify-end space-x-6">
                 <a href="#home" class="me-3 font-normal">Home</a>
                 <a href="#about" class="me-3 font-normal">About Us</a>
-                <a href="#popular" class="me-3 font-normal">Popular</a>
-                <a href="#recently" class="me-3 font-normal">Recently</a>
+                <a href="#popular" class="me-3 font-normal">Menu</a>
+                <a href="#recently" class="me-3 font-normal">Best Seller</a>
                 <button onclick="darkTheme()" class="font-normal dark-button"><i class="ri-moon-line"></i></button>
               </div>
             </div>
@@ -225,6 +225,9 @@
                 <button class="bg-transparent showmore mx-auto flex justify-between items-center">
                   Show More <i class="ri-arrow-down-s-line"></i>
                 </button>
+                <button class="bg-transparent showless hidden mx-auto flex justify-between items-center">
+                  Show Less <i class="ri-arrow-up-s-line"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -242,7 +245,7 @@
             <div class="container">
               <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
                 <div class="text-center container relative md:text-left" id="recently-data">
-                  <div class="subtitle mb-2">Popular Dish</div>
+                  <div class="subtitle mb-2">Best Seller</div>
                   <img src="assets\img\homepage\lettuce1.png" class="spinach-1" alt="">
                   <h2 class="mb-6">
                     Nasi Ayam Bakar <br>
@@ -254,12 +257,16 @@
                     <!-- Take a look at what's new. And do not deprive 
                     yourself of a good meal, enjoy and be happy. -->
                   </p>
-                  <button class="inline-flex items-center content-between mx-auto md:mx-0 py-2 block px-6 rounded-full">
+                  <button id="button-recently" class="inline-flex items-center content-between mx-auto md:mx-0 py-2 block px-6 rounded-full">
                     Order Now <i class="ml-3 ri-arrow-right-line"></i>
                   </button>
+                  <a id="link-recently" href="https://gofood.link/a/FUdM7mC" class="hidden" target="__blank" rel="noopener noreferrer"></a>
                 </div>
                 <div class="container" id="recently-image">
-                  <img class="mx-auto" src="assets\img\homepage\4 - Copy.png" alt="Recently image">
+                  <img src="assets\img\svg\8cNNAr01.svg" class="svg-1">
+                  <img src="assets\img\svg\BDR5Wr01.svg" class="svg-2">
+                  <img src="assets\img\svg\QC3YNc01.svg" class="svg-3">
+                  <img class="mx-auto img" src="assets\img\homepage\4 - Copy.png" alt="Recently image">
                 </div>
               </div>
             </div>
@@ -282,17 +289,18 @@
                   </div>
                   <div class="container text-center md:my-auto md:text-left">
                     <div class="subtitle mb-3">
-                      Newsletter
+                      Reservation
                     </div>
                     <h1 class="mb-6">
-                      Subscribe For <br>
-                      Offer Updates
+                      Chat Kami Untuk <br>
+                      Melakukan Reservasi 
                     </h1>
-                    <form action="#" method="post" class="flex p-1 content-between items-center w-full rounded-full border-0 mx-1">
-                      <input type="email" placeholder="Enter email" name="email" id="email" class="w-6/12 md:w-8/12 text-xs inline bg-transparent outline-0 border-0">
-                      <button class="flex justify-center items-center w-6/12 md:w-4/12 text-xs rounded-full px-3 py-3">
-                        Subscribe <i class="ml-1 ri-send-plane-fill"></i>
+                    <form onsubmit="event.preventDefault(); submitForm();" id="form-newsletter" method="post" class="flex p-1 content-between items-center w-full rounded-full border-0 mx-1">
+                      <input type="text" placeholder="Masukan Pesan Kamu" name="email" id="email" class="w-6/12 md:w-8/12 text-xs inline bg-transparent outline-0 border-0">
+                      <button type="submit" class="flex justify-center items-center w-6/12 md:w-4/12 text-xs rounded-full px-3 py-3">
+                        Kirim <i class="ml-1 ri-send-plane-fill"></i>
                       </button>
+                      <a href="#" class="hidden" target="__blank" id="link-newsletter"></a>
                     </form>
                   </div>
                 </div>
@@ -331,10 +339,10 @@
               <div class="font-bold mb-8">
                 Main Menu
               </div>
-              <a href="#" class="mb-2 block">About</a>
-              <a href="#" class="mb-2 block">Menus</a>
-              <a href="#" class="mb-2 block">Offer</a>
-              <a href="#" class="mb-2 block">Events</a>
+              <a href="#about" class="mb-2 block">About</a>
+              <a href="assets\pdf\Daftar Menu depan.pdf" class="mb-2 block">Menus</a>
+              <a href="https://gofood.link/a/FHGnD11" class="mb-2 block">Offer</a>
+              <a href="https://www.instagram.com/xibamboo_98/" class="mb-2 block">Events</a>
             </div>
             <div class="md:col-span-2 col-span-5 mb-12">
               <div class="font-bold mb-8">
@@ -342,7 +350,7 @@
               </div>
               <a href="https://wa.me\6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Contact</a>
               <a href="https://wa.me\6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Order & Return</a>
-              <a href="#" class="mb-2 block">Videos</a>
+              <a href="https://www.instagram.com/xibamboo_98/" class="mb-2 block">Videos</a>
               <a href="https://wa.me\6281323458010" target="_blank" rel="nooepener noreferrer" class="mb-2 block">Reservation</a>
             </div>
             <div class="md:col-span-2 col-span-5 mb-12">
@@ -406,10 +414,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.6/axios.min.js" integrity="sha512-RUkwGPgBmjCwqXpCRzpPPmGl0LSFp9v5wXtmG41+OS8vnmXybQX5qiG5adrIhtO03irWCXl+z0Jrst6qeaLDtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets\js\scrollreveal.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js\img\main\js"></script>
-    <script src="assets/js/fetchMenu.js"></script>
+    <script src="assets\js\main.js"></script>
+    <script src="assets\js\fetchMenu.js"></script>
   </body>
 </html>
