@@ -44,7 +44,7 @@
   #about h1 img {
     width: 70px;
   }
-  #about img {
+  #about .img {
     width: 400px;
   }
 
@@ -56,12 +56,18 @@
   #recently-image .img{
     width: 380px;
   }
+  #recently-image{
+    width: auto;
+    height: auto;
+    aspect-ratio: none;
+  }
 
   #newsletter .img-newsletter{
     position: inherit;
     top: auto;
     left: auto;
     width: 240px;
+    transform: scale(1, 1);
   }
   #newsletter .spinach-1{
     width: 50px;

@@ -67,7 +67,7 @@
   }
 
   50% {
-    transform: rotate(250deg) translate(-20px, -5px);
+    transform: rotate(255deg) translate(-20px, -5px);
   }
 
   100%{
@@ -102,6 +102,45 @@
   }
 }
 
+@keyframes floating-aksara-1-home {
+  0% {
+    transform: rotate(-90deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(-85deg) translate(-14px, -2px);
+  }
+
+  100%{
+    transform: rotate(-90deg) translate(0px, 0px);
+  }
+}
+@keyframes floating-aksara-2-home {
+  0% {
+    transform: rotate(-90deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(-75deg) translate(-16px, -3px);
+  }
+
+  100%{
+    transform: rotate(-90deg) translate(0px, 0px);
+  }
+}
+@keyframes floating-aksara-3-home {
+  0% {
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: rotate(75deg) translate(-15px, -3px);
+  }
+
+  100%{
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+}
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -312,13 +351,45 @@ button:hover i{
 #home button:hover{
   background-color: var(--first-color-alt);
 }
+#home-image .svg-1, .svg-2, .svg-3{
+  position: absolute;
+  height: var(--biggest-font-size);
+  transform: rotate(90deg);
+}
+#home-image .svg-1{
+  transform: rotate(-90deg);
+  bottom: 10px;
+  right: 10%;
+  animation: floating-aksara-1-home 8000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#home-image .svg-2{
+  top: 10%;
+  left: 10%;
+  transform: rotate(-90deg);
+  width: var(--biggest-font-size);
+  height: auto;
+  animation: floating-aksara-2-home 10000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#home-image .svg-3{
+  bottom: -4%;
+  left: 10px;
+  width: var(--biggest-font-size);
+  height: auto;
+  animation: floating-aksara-3-home 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
 /* ABOUT STYLE */
 #about {
   position: relative;
   overflow: hidden;
 }
-#about img {
+#about .img {
   width: 220px;
 }
 #about h1 img {
@@ -335,6 +406,27 @@ button:hover i{
   right: -10px;
   bottom: 25%;
   transform: rotate(-30deg);
+}
+#about-image .svg-1, .svg-2{
+  transform: rotate(90deg);
+  width: var(--biggest-font-size);
+  height: fit-content;
+  position: absolute;
+}
+#about-image .svg-2{
+  transform: rotate(-90deg);
+  top: 10px;
+  left: 10px;
+  animation: floating-aksara-1-home 7000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#about-image .svg-1{
+  bottom: 10px;
+  right: 10%;
+  animation: floating-aksara-3-home 8000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 
@@ -403,9 +495,9 @@ button:hover i{
   right: -1rem;
   transform: rotate(250deg);
   z-index: -1;
-  animation: floating-spinach-recently 5000ms;
+  /* animation: floating-spinach-recently 10000ms;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 #recently .leaf-1, .leaf-2{ 
@@ -439,9 +531,16 @@ button:hover i{
 }
 #recently-image{
   position: relative;
+  width: 280px;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 #recently-image .img{
-  width: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -60%);
+  width: 280px;
 }
 #recently-image .svg-1, .svg-2, .svg-3{
   position: absolute;
@@ -451,22 +550,22 @@ button:hover i{
 }
 #recently-image .svg-1{
   top: 10px;
-  right: 30px;
-  animation: floating-aksara-1-recently 6000ms;
+  right: 15%;
+  animation: floating-aksara-1-recently 8000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 #recently-image .svg-2{
-  bottom: 10px;
-  right: 30%;
-  animation: floating-aksara-2-recently 5000ms;
+  bottom: 10%;
+  right: 8%;
+  animation: floating-aksara-2-recently 7000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 #recently-image .svg-3{
   top: 60%;
   left: 10px;
-  animation: floating-aksara-1-recently 7000ms;
+  animation: floating-aksara-1-recently 9000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -487,11 +586,27 @@ button:hover i{
   color: var(--second-color);
   overflow: hidden;
 }
+#newsletter .lettuce-1, .lettuce-2{
+  height: var(--biggest-font-size);
+  width: fit-content;
+  position: absolute;
+  transform: rotate(45deg);
+}
+#newsletter .lettuce-1{
+  bottom: 10px;
+  left: 15%;
+}
+#newsletter .lettuce-2{
+  top: 10px;
+  right: 8%;
+  transform: rotate(-45deg);
+}
 #newsletter .img-newsletter{
   position: absolute;
   top: -50px;
-  left: -140px;
+  left: -170px;
   width: 220px;
+  transform: scale(-1, 1);
 }
 #newsletter form{
   background-color: var(--second-color);
@@ -591,12 +706,13 @@ button:hover i{
 	color:var(--second-color);
 	border-radius:50px;
 	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 3px var(--border-color);
   display: flex;
   text-align: center;
   justify-content: center;
   font-size: 40px;
   transition: all .5s;
+  z-index: 500;
 }
 
 .float:hover{
