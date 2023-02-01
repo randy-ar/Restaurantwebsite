@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/styles-md.css">
     <link rel="stylesheet" href="assets/css/styles-lg.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -148,90 +149,19 @@
           <div class="col-span-1"></div>
           <div class="col-span-9">
             <div class="container mx-auto">
-              <div class="text-center mb-16">
-                <div class="subtitle">The Best Food</div>
-                <h2>The Dishes</h2>
+              <div class="text-center mb-8">
+                <h1>Menu</h1>
+                <!-- <h2>Hidangan Terbaik</h2> -->
               </div>
-              <div class="mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-6 lg:gap-16" id="list-menu">
-                <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\menu\ayambakar.png" class="mx-auto menu-img" alt="">
-                    <div class="text-center">
-                      <h1 class="whitespace-nowrap">
-                        Ayam Bakar
-                      </h1>
-                      <p>
-                        Best Seller
-                      </p>
-                      <div class="flex justify-between items-center">
-                        <div></div>
-                        <div class="text-center price">
-                          Rp.30000
-                        </div>
-                        <div class="text-right">
-                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
-                            <i class="ri-shopping-bag-line"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\menu\buntut.png" class="mx-auto menu-img" alt="">
-                    <div class="text-center">
-                      <h1 class="whitespace-nowrap">
-                        Buntut Bakar
-                      </h1>
-                      <p>
-                        Best Seller
-                      </p>
-                      <div class="flex justify-between items-center">
-                        <div></div>
-                        <div class="text-center price">
-                          Rp.45000
-                        </div>
-                        <div class="text-right">
-                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
-                            <i class="ri-shopping-bag-line"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="md:col-span-4">
-                  <div class="mx-auto menu-container px-8 pt-28 pb-6 w-64 md:w-auto lg:w-64 h-auto rounded-2xl shadow-lg">
-                    <img src="assets\img\menu\ayamungkep.png" class="mx-auto menu-img" alt="">
-                    <div class="text-center">
-                      <h1 class="whitespace-nowrap">
-                        Ayam Ungkep
-                      </h1>
-                      <p>
-                        Best Seller
-                      </p>
-                      <div class="flex justify-between items-center">
-                        <div></div>
-                        <div class="text-center price">
-                          Rp.30000
-                        </div>
-                        <div class="text-right">
-                          <button class="menu-button text-center md:w-6 md:h-6 w-8 h-8 rounded-full text-white">
-                            <i class="ri-shopping-bag-line"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div id="list-menu">
+                
               </div>
               <div class="text-center mt-16 mb-6">
                 <button class="bg-transparent showmore mx-auto flex justify-between items-center">
                   Show More <i class="ri-arrow-down-s-line"></i>
                 </button>
                 <button class="bg-transparent showless hidden mx-auto flex justify-between items-center">
-                  Show Less <i class="ri-arrow-up-s-line"></i>
+                  All Menus <i class="ml-4 ri-book-open-line"></i>
                 </button>
               </div>
             </div>
@@ -347,7 +277,7 @@
                 Main Menu
               </div>
               <a href="#about" class="mb-2 block">About</a>
-              <a href="assets\pdf\Daftar Menu depan.pdf" class="mb-2 block">Menus</a>
+              <a id="all-menus" href="assets\pdf\Daftar Menu depan.pdf" class="mb-2 block">Menus</a>
               <a href="https://gofood.link/a/FHGnD11" class="mb-2 block">Offer</a>
               <a href="https://www.instagram.com/xibamboo_98/" class="mb-2 block">Events</a>
             </div>
@@ -425,6 +355,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets\js\main.js"></script>
+    <script src="assets\js\slider.js"></script>
     <script src="assets\js\fetchMenu.js"></script>
   </body>
 </html>

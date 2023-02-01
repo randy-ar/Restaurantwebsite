@@ -83,4 +83,4 @@ sr.reveal('#home-image, #newsletter, #footer-info, #footer-content .mb-12');
 sr.reveal('#home-data', {origin: 'bottom'});
 sr.reveal('#about-image, #recently-image', {origin: 'right'});
 sr.reveal('#about-data, #recently-data', {origin: 'left'});
-sr.reveal('.menu-container', {interval: 150});
+sr.reveal('#list-menu', {interval: 150});

@@ -431,6 +431,9 @@ button:hover i{
 
 
 /* POPULAR */
+#popular h1{
+  font-size: var(--biggest-font-size);
+}
 #popular h2{
   font-size: var(--h3-font-size);
   font-family: var(--title-font);
@@ -470,10 +473,12 @@ button:hover i{
   transition: transform .4s;
 }
 .menu-button{
+  text-decoration: none;
   background-color: var(--first-color);
   color: whitesmoke;
   transition: background .3s;
   cursor: pointer;
+  display: block;
 }
 .menu-button:hover{
   background-color: var(--first-color-alt);
@@ -734,4 +739,13 @@ button:hover i{
 }
 .showmore:hover, .showless:hover{
   color: var(--first-color-alt) !important;
+}
+
+.carousel a i{
+  color: var(--text-color);
+  font-size: var(--biggest-font-size);
+  transition: color .3s;
+}
+.carousel a i:hover{
+  color: var(--first-color-alt);
 }
