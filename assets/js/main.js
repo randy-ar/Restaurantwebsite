@@ -1,3 +1,6 @@
+// NIM   : 10122416
+//   NAMA  : RANDY ABDUL RAHMAN
+//   KELAS : IF-11
 $(document).ready(function () {
   var navBar = $('#header nav').height();
   var navBlock = $('#block-nav');

@@ -1,3 +1,6 @@
+// NIM   : 10122416
+//   NAMA  : RANDY ABDUL RAHMAN
+//   KELAS : IF-11
 var list_menu = []
 var list_kategori = []
 var showed = 1
